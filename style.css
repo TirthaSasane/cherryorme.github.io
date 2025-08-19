@@ -1,77 +1,131 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tirtha — Brag Sheet</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-<body class="brag-body">
-  <div class="container fade-in">
-    <header class="sticky-header">
-      <div class="logo">🍒</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="brag-sheet.html" class="active">Brag Sheet</a>
-      </nav>
-    </header>
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <section class="page-title">
-      <h1>Brag Sheet</h1>
-      <p>My story, projects, and skills — in crimson glow.</p>
-    </section>
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #0d0d0d, #1a0006);
+  color: #f8d7da;
+  line-height: 1.6;
+}
 
-    <div class="cherry-divider">🍒</div>
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
 
-    <section class="card">
-      <h2>Academics & Achievements</h2>
-      <ul>
-        <li><strong>Current GPA/Marks:</strong> 81%</li>
-        <li><strong>1st place</strong> — Story Writing Competition (peer-organized, 2024)</li>
-      </ul>
-    </section>
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    <div class="cherry-divider">🍒</div>
+/* Header */
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  border-bottom: 1px solid #4d0a0a;
+}
 
-    <section class="card">
-      <h2>Leadership & Activities</h2>
-      <ul>
-        <li><strong>Sibling Caregiver (2019–Present)</strong> — After-school responsibility for younger brother while parents worked.</li>
-        <li><strong>Basketball Captain (Girls’ Team) (9th–10th Grade)</strong> — Led practices, coordinated matches, mentored teammates.</li>
-        <li><strong>Multi-Sport Involvement</strong> — Played badminton, volleyball, athletics (non-competitive).</li>
-        <li><strong>Digital Creator (2023–Present)</strong> — Built audience across YouTube (50+ subs) & Instagram (100+ followers).</li>
-      </ul>
-    </section>
+.logo {
+  font-size: 2rem;
+}
 
-    <div class="cherry-divider">🍒</div>
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #ff4d6d;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+nav a:hover {
+  color: #ff809f;
+  text-shadow: 0 0 8px #ff4d6d;
+}
+nav a.active {
+  border-bottom: 2px solid #ff4d6d;
+}
 
-    <section class="card">
-      <h2>Key Technical Projects</h2>
-      <ul>
-        <li><strong>Iron Man Hand-Tracking Program (Python + OpenCV)</strong> — Gesture-controlled J.A.R.V.I.S.-style interaction.</li>
-        <li><strong>Football Tracking App (Python)</strong> — Real-time ball detection & trajectory analysis.</li>
-        <li><strong>Multiplayer Car Racing Game</strong> — Multiplayer racing with collisions + sync.</li>
-        <li><strong>Invisibility Cloak App (Python)</strong> — Cloth detection + background replacement.</li>
-        <li><strong>Meteor Tracking App</strong> — NASA APIs + live sky visualization.</li>
-        <li><strong>Dwarf Stars Database App</strong> — Advanced searchable NASA dataset.</li>
-        <li><strong>Face Recognition App</strong> — Biometric authentication with OpenCV + ML.</li>
-        <li><strong>Library Management App</strong> — Borrow/return system with DB tracking.</li>
-        <li><strong>Additional Projects:</strong> Flappy Bird, Chrome T-Rex, automation tools, UI design.</li>
-      </ul>
-    </section>
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 12px #b3003b;
+}
+.hero .tagline {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
 
-    <div class="cherry-divider">🍒</div>
+/* Cards */
+.card {
+  background: rgba(30, 0, 10, 0.9);
+  border: 1px solid #4d0a0a;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(120, 0, 40, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 77, 109, 0.8);
+}
+.card h2 {
+  margin-bottom: 1rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 8px #990033;
+}
+.card ul {
+  list-style: disc inside;
+}
+.card li {
+  margin-bottom: 0.5rem;
+}
 
-    <section class="card">
-      <h2>Skills</h2>
-      <p><strong>Technical:</strong> Python, JavaScript, React Native, HTML/CSS, Git, APIs, OpenCV, Machine Learning, Game Dev, Networking, Database Systems, Image Processing, HCI</p>
-      <p><strong>Creative:</strong> Storytelling, content creation, digital branding</p>
-      <p><strong>Soft Skills:</strong> Leadership, adaptability, problem-solving, responsibility, time management</p>
-    </section>
+/* Dividers */
+.cherry-divider {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: #ff4d6d;
+  text-shadow: 0 0 10px #660022;
+}
 
-    <footer>
-      <p>© 2025 Tirtha — Dark Cherry Brag Sheet</p>
-    </footer>
-  </div>
-</body>
-</html>
+/* Page Titles */
+.page-title h1 {
+  font-size: 2.5rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 12px #b3003b;
+}
+.page-title p {
+  margin-top: 0.5rem;
+  color: #f2a1a8;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #4d0a0a;
+  color: #cc8899;
+}
