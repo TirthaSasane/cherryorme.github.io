@@ -109,3 +109,26 @@ footer {
   color: #b3a1a8;
   font-size: 0.9rem;
 }
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at center, #1a0b12 0%, #0a0a0a 100%);
+  border-bottom: 2px solid #800020;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ff003c;
+  text-shadow: 0 0 15px #800020, 0 0 30px #ff003c;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #f5e1e8;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
