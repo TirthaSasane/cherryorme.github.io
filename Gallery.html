@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Tirtha</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 0, 60, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="brag-sheet.html">Brag Sheet</a>
+    <a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <section>
+    <h1>Gallery</h1>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300?text=Cherry+1" alt="Cherry Pic 1">
+      <img src="https://via.placeholder.com/400x300?text=Cherry+2" alt="Cherry Pic 2">
+      <img src="https://via.placeholder.com/400x300?text=Cherry+3" alt="Cherry Pic 3">
+      <!-- EDIT: Replace with your own images -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tirtha | Dark Cherry Energy 🍷</p>
+  </footer>
+</body>
+</html>
